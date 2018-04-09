@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#456"
+    android:orientation="vertical"
+    tools:context=".logINandlogOut.SignUpClass">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign-Up"
+        android:textColor="#fff"
+        android:textSize="35dp" />
+
+    <EditText
+        android:id="@+id/fullnameEditTextID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/edittextdesignxml"
+        android:drawablePadding="15dp"
+        android:hint="Enter  Name"
+        android:padding="16dp" />
+
+
+    <EditText
+        android:id="@+id/userNameEditTextID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/edittextdesignxml"
+        android:drawablePadding="15dp"
+        android:hint="UserName Must be Unique"
+        android:padding="16dp" />
+
+    <EditText
+        android:id="@+id/mailEditTextID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/edittextdesignxml"
+        android:drawablePadding="15dp"
+        android:hint="Enter Your Mail "
+        android:inputType="textEmailAddress"
+        android:padding="16dp" />
+
+    <EditText
+        android:id="@+id/passwordEditTextID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/edittextdesignxml"
+        android:drawablePadding="15dp"
+        android:hint="Enter Password"
+        android:padding="16dp" />
+
+    <Button
+        android:id="@+id/registerButtonID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register" />
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:id="@+id/backButtonID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back to Login Page" />
+
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#456"
+    android:gravity="center"
+    android:weightSum="5"
+    android:orientation="vertical"
+    tools:context=".Start">
+    <Button
+        android:id="@+id/signInButtonID"
+        android:text="Sign-IN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/signUpButtonID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign-UP" />
+
+    <Button
+        android:id="@+id/othersButtonID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Others Practics" />
+
+
+</LinearLayout>
