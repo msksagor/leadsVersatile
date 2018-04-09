@@ -36,6 +36,7 @@ public class SignInClass extends AppCompatActivity {
             Boolean result = mydatabaseHelper.findpasswordanduserName(userNameString,passwordString);
                 if(result==true){
                     Intent i = new Intent(SignInClass.this,LoggedIn.class);
+                    i.putExtra("username",userNameString);
                     startActivity(i);
                 }else{
 
