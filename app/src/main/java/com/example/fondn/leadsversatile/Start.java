@@ -32,15 +32,15 @@ public class Start extends AppCompatActivity implements View.OnClickListener{
     @Override
     public void onClick(View v) {
         if(v.getId()==R.id.signInButtonID){
-            Toast.makeText(this, "SignIN ", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "SignIN ", Toast.LENGTH_SHORT).show();
             Intent i = new Intent(Start.this,SignInClass.class);
             startActivity(i);
         }else if(v.getId()==R.id.signUpButtonID){
-            Toast.makeText(this, "Create Account", Toast.LENGTH_SHORT).show();
+           // Toast.makeText(this, "Create Account", Toast.LENGTH_SHORT).show();
             Intent i = new Intent(Start.this,SignUpClass.class);
             startActivity(i);
         }else if(v.getId()==R.id.othersButtonID){
-            Toast.makeText(this, "Welcome to Others Pannel", Toast.LENGTH_SHORT).show();
+           // Toast.makeText(this, "Welcome to Others Pannel", Toast.LENGTH_SHORT).show();
             Intent i = new Intent(Start.this,Others.class);
             startActivity(i);
         }

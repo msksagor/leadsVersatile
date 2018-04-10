@@ -67,15 +67,40 @@ public class MydatabaseHelper extends SQLiteOpenHelper {
         long rowid = database.insert(TABLE_NAME, null, contentValues);
         return rowid;
     }
-
-    public Cursor showDataFromDatabase() {
+////////////ShowData
+    public Cursor showDataFromDatabase(String key) {
         SQLiteDatabase database = this.getWritableDatabase();
-        Cursor cursor = database.rawQuery(SELECTDATA, null);
+        //Cursor cursor = database.rawQuery(SELECTDATA, null);
+      //  Cursor cursor = database.rawQuery("SELECT * FROM LIST WHERE "+USERNAME+" = "+Username+"", null);
+//       Cursor cursor = database.rawQuery("SELECT * FROM LIST WHERE "+ID+" = "+1, null);
+        //String Nkey  = key;
+        Cursor cursor = database.rawQuery("SELECT * FROM Student_Details WHERE " + USERNAME + "= '" + key + "'", null);
+        //String query = "SELECT COUNT(*) FROM " + tableName + " WHERE columnName = ?";
+        //cursor = db.rawQuery(query, new String[] {comment});
+
         return cursor;
     }
 
 
 
+    public String getEmployeeName(String empNo) {
+        SQLiteDatabase database = this.getWritableDatabase();
+        Cursor cursor = null;
+        String empName = "";
+        try {
+            cursor = database.rawQuery("SELECT EmployeeName FROM Employee WHERE EmpNo=?", new String[] {empNo + ""});
+            if(cursor.getCount() > 0) {
+                cursor.moveToFirst();
+                empName = cursor.getString(cursor.getColumnIndex("EmployeeName"));
+            }
+            return empName;
+        }finally {
+            cursor.close();
+        }
+    }
+
+
+    ////showData
     public int deleteData(String id){
         SQLiteDatabase database = this.getWritableDatabase();
         return database.delete(TABLE_NAME,ID+" = ?",new String[] {id});
@@ -89,7 +114,8 @@ public class MydatabaseHelper extends SQLiteOpenHelper {
         Boolean result = false;
 
         if(cursor.getCount()==0){
-            Toast.makeText(context, "No Data Found", Toast.LENGTH_SHORT).show();
+           // Toast.makeText(context, "No Data Found", Toast.LENGTH_SHORT).show();
+
         }else{
             while (cursor.moveToNext()){
                 //String useName = cursor.getString(2);

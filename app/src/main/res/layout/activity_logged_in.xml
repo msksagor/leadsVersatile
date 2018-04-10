@@ -159,6 +159,7 @@
     <Button
         android:id="@+id/backFromLoggedInButton"
         android:text="Back"
+        android:onClick="backToHome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
