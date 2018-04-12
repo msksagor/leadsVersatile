@@ -4,6 +4,7 @@ package com.example.fondn.leadsversatile.dialpaddirectory;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -14,14 +15,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
+
 
 import com.example.fondn.leadsversatile.R;
 
 public class TouchPadFragment extends Fragment implements View.OnClickListener {
 
     private EditText insertNumerET;
-    private Button one,two,three,four,five,six,seven,eight,nine,zero,star,hash,deteleButton;
+    private Button one,two,three,four,five,six,seven,eight,nine,zero,star,hash,deteleButton,callButton;
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
@@ -39,6 +40,8 @@ public class TouchPadFragment extends Fragment implements View.OnClickListener {
         zero = (Button) getActivity().findViewById(R.id.zeroID);
         star = (Button) getActivity().findViewById(R.id.starID);
         hash = (Button) getActivity().findViewById(R.id.hashID);
+        deteleButton = (Button) getActivity().findViewById(R.id.deletebuttonID);
+        callButton = (Button) getActivity().findViewById(R.id.callButtonID);
 
         one.setOnClickListener(TouchPadFragment.this);
         two.setOnClickListener(TouchPadFragment.this);
@@ -52,6 +55,21 @@ public class TouchPadFragment extends Fragment implements View.OnClickListener {
         zero.setOnClickListener(TouchPadFragment.this);
         star.setOnClickListener(TouchPadFragment.this);
         hash.setOnClickListener(TouchPadFragment.this);
+        deteleButton.setOnClickListener(TouchPadFragment.this);
+
+
+        callButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String number = insertNumerET.getText().toString();
+                Intent callIntent = new Intent(Intent.ACTION_CALL);
+                callIntent.setData(Uri.parse("tel:"+number));
+                startActivity(callIntent);
+
+            }
+        });
+
+
 
 
     }
@@ -63,6 +81,8 @@ public class TouchPadFragment extends Fragment implements View.OnClickListener {
                              Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_touch_pad, container, false);
     }
+
+
 
 
     @Override
@@ -164,7 +184,19 @@ public class TouchPadFragment extends Fragment implements View.OnClickListener {
                 String str = insertNumerET.getText().toString();
                 insertNumerET.setText(str+"#");
             }
+        }else if(v.getId()==R.id.deletebuttonID){
+            String str = insertNumerET.getText().toString();
+            if(str.equals("")){
+               insertNumerET.setText("");
+            }else{
+                String cutString =  str.substring(0, str.length() - 1);
+                insertNumerET.setText(cutString);
+            }
+
+
         }
+
+
 
 
     }

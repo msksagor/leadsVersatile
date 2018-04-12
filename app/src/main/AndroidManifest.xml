@@ -2,7 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.fondn.leadsversatile">
 
+
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CALL_PRIVILEGED"/>
 
     <application
         android:allowBackup="true"
@@ -22,7 +24,9 @@
         <activity android:name=".Others" />
         <activity android:name=".logINandlogOut.LoggedIn" />
         <activity android:name=".others.OthersTools" />
-        <activity android:name=".dialpaddirectory.CallingActivity"></activity>
+        <activity android:name=".dialpaddirectory.CallingActivity"
+
+            ></activity>
     </application>
 
 </manifest>
