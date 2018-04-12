@@ -3,6 +3,7 @@ package com.example.fondn.leadsversatile;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,11 +16,12 @@ import android.widget.Toast;
 
 import com.example.fondn.leadsversatile.adapterandencrypter.CustomAdapter;
 import com.example.fondn.leadsversatile.adapterandencrypter.StoreEncryp;
+import com.example.fondn.leadsversatile.others.OthersTools;
 
 import java.util.ArrayList;
 
 public class Others extends AppCompatActivity {
-    Button okButton;
+    Button okButton,showOthersButton;
     EditText editText;
     ListView listView;
     ArrayList<StoreEncryp> arrayList = new ArrayList<>();
@@ -32,6 +34,7 @@ public class Others extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_others);
         okButton = (Button) findViewById(R.id.okbuttonID);
+        showOthersButton = (Button) findViewById(R.id.showOthersToolsbuttonID);
         editText = (EditText) findViewById(R.id.firstnameEditTextID);
         listView = (ListView) findViewById(R.id.listviewID);
 
@@ -91,6 +94,17 @@ public class Others extends AppCompatActivity {
                 sh.show();
 
                 return false;
+            }
+        });
+
+
+
+
+        showOthersButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Others.this, OthersTools.class);
+                startActivity(i);
             }
         });
     }

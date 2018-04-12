@@ -2,9 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.fondn.leadsversatile">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher_by_me"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
@@ -18,7 +20,9 @@
         <activity android:name=".logINandlogOut.SignInClass" />
         <activity android:name=".logINandlogOut.SignUpClass" />
         <activity android:name=".Others" />
-        <activity android:name=".logINandlogOut.LoggedIn"></activity>
+        <activity android:name=".logINandlogOut.LoggedIn" />
+        <activity android:name=".others.OthersTools" />
+        <activity android:name=".dialpaddirectory.CallingActivity"></activity>
     </application>
 
 </manifest>

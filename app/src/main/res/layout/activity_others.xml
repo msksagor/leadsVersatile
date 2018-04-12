@@ -4,20 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#456"
+
     android:orientation="vertical"
     tools:context=".Others">
 
+    <Button
+        android:id="@+id/showOthersToolsbuttonID"
+        android:background="@drawable/edittextdesignxml"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tools" />
+
+    
     <EditText
+        android:layout_marginTop="35dp"
         android:id="@+id/firstnameEditTextID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Something"
+        android:background="@drawable/edittextdesignxml"
+        android:textColorHint="@color/white"
         android:textAlignment="center"
         android:textSize="25dp" />
 
     <Button
         android:id="@+id/okbuttonID"
+        android:background="@drawable/edittextdesignxml"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Insert" />

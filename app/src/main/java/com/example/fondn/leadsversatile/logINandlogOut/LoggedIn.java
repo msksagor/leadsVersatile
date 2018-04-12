@@ -109,5 +109,6 @@ public class LoggedIn extends AppCompatActivity {
 
     public void BackToHome(View view) {
         Intent i = new Intent(LoggedIn.this, Start.class);
+        startActivity(i);
     }
 }
