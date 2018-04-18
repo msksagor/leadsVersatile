@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.fondn.leadsversatile.dialpaddirectory.CallingActivity;
 import com.example.fondn.leadsversatile.logINandlogOut.SignInClass;
 import com.example.fondn.leadsversatile.logINandlogOut.SignUpClass;
 
@@ -46,5 +47,10 @@ public class Start extends AppCompatActivity implements View.OnClickListener{
         }
 
 
+    }
+
+    public void dialshortcut(View view) {
+        Intent i = new Intent(Start.this,CallingActivity.class);
+        startActivity(i);
     }
 }

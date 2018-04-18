@@ -26,6 +26,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Others Practics" />
+<Button
+        android:id="@+id/dialpadshortcutButtonID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="dialshortcut"
+        android:text="Call" />
 
 
 </LinearLayout>
